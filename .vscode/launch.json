@@ -1,16 +1,25 @@
 {
-  // Use IntelliSense para saber los atributos posibles.
-  // Mantenga el puntero para ver las descripciones de los existentes atributos.
-  // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
   "configurations": [
     {
-      "name": "Attach to Chrome",
-      "port": 9222,
-      "request": "attach",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "name": "Launch Firefox",
+      "file": "${workspaceFolder}/invitation.html"
+    },
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
       "type": "pwa-chrome",
+      "url": "file://${workspaceFolder}/invitation.html",
       "webRoot": "${workspaceFolder}"
-    }
-
+    },
+  {
+    "name": "Attach to Chrome",
+    "port": 9222,
+    "request": "attach",
+    "type": "pwa-chrome",
+    "webRoot": "${workspaceFolder}"
+  }
   ]
 }
