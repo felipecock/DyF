@@ -67,6 +67,12 @@
         fill: #78846c;
         width: 100%;
         height: 100%;
+        visibility: hidden;
+        transition: visibility linear 0s calc(var(--open-time));
+      }
+
+      #open-button.open svg {
+        visibility: visible;
       }
       
       #open-button.open {
@@ -111,7 +117,6 @@
       #ala-derecha-anverso {
         transform: rotateY(180deg);
         transition: ease-in-out var(--open-time);
-        backface-visibility: hidden;
       }
 
       #ala-izquierda-anverso,
